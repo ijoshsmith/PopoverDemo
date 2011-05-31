@@ -20,14 +20,18 @@
     UITextField *_targetTextField;
 }
 
+// Designated initializer.
 - (id)initWithButton:(UIButton *)openButton
      targetTextField:(UITextField *)textField
              options:(NSArray *)options
   includeOtherOption:(BOOL)includeOther;
 
+// Initializer for situations where the list of options is not known until later.
 - (id)initWithButton:(UIButton *)openButton
       targetTextField:(UITextField *)textField;
 
+// Replaces the list of options shown in the popover.
+// Pass YES for 'includeOther' to have the "Other..." option displayed.
 - (void)setOptions:(NSArray *)options
 includeOtherOption:(BOOL)includeOther;
 

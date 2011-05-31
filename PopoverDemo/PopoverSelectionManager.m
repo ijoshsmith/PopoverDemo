@@ -15,6 +15,16 @@ static NSString *NO_OPTIONS_AVAILABLE_PLACEHOLDER = @"";
 
 @implementation PopoverSelectionManager
 
+- (void)dealloc
+{
+    [_openPopoverButton release];
+    [_options release];
+    [_popover release];
+    [_targetTextField release];
+    
+    [super dealloc];
+}
+
 // Designated initializer.
 - (id)initWithButton:(UIButton *)openButton 
      targetTextField:(UITextField *)textField 
@@ -45,16 +55,6 @@ static NSString *NO_OPTIONS_AVAILABLE_PLACEHOLDER = @"";
              includeOtherOption:NO];
 }
 
-- (void)dealloc
-{
-    [_openPopoverButton release];
-    [_options release];
-    [_popover release];
-    [_targetTextField release];
-    
-    [super dealloc];
-}
-
 - (void)setOptions:(NSArray *)options includeOtherOption:(BOOL)includeOther
 {
     [_popover release];
@@ -78,7 +78,6 @@ static NSString *NO_OPTIONS_AVAILABLE_PLACEHOLDER = @"";
     }
     
     [_options retain];
-
 }
 
 - (UIPopoverController *)createOrReusePopover
@@ -88,7 +87,7 @@ static NSString *NO_OPTIONS_AVAILABLE_PLACEHOLDER = @"";
         PopoverTableViewController *tvc = [[[PopoverTableViewController alloc] initWithStyle:UITableViewStylePlain] autorelease];
         tvc.dataItems = _options;
         tvc.delegate = self;
-        tvc.contentSizeForViewInPopover = [tvc naturalSize];
+        tvc.contentSizeForViewInPopover = tvc.naturalSize;
         _popover = [[UIPopoverController alloc] initWithContentViewController:tvc];
     }
     return _popover;
@@ -117,9 +116,10 @@ static NSString *NO_OPTIONS_AVAILABLE_PLACEHOLDER = @"";
 - (void)popoverTableViewController:(PopoverTableViewController *)popoverTableViewController 
                    didSelectOption:(NSString *)selectedOption
 {
-    BOOL hasOptions = _options 
-        && [_options count] 
-        && ![[_options objectAtIndex:0] isEqualToString:NO_OPTIONS_AVAILABLE_PLACEHOLDER];
+    BOOL hasOptions = 
+    _options
+    && [_options count] 
+    && ![[_options objectAtIndex:0] isEqualToString:NO_OPTIONS_AVAILABLE_PLACEHOLDER];
     
     if (hasOptions)
     {

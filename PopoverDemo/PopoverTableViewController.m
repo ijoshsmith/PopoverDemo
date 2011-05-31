@@ -16,6 +16,13 @@ static const CGFloat COLUMN_WIDTH = 200.0f;
 @synthesize dataItems=_dataItems;
 @synthesize delegate=_delegate;
 
+- (void)dealloc
+{
+    [_dataItems release];
+    
+    [super dealloc];
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -23,13 +30,6 @@ static const CGFloat COLUMN_WIDTH = 200.0f;
         // Custom initialization
     }
     return self;
-}
-
-- (void)dealloc
-{
-    [_dataItems release];
-    
-    [super dealloc];
 }
 
 - (CGSize)naturalSize

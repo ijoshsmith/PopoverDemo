@@ -23,7 +23,6 @@
 
 @property (nonatomic, retain) NSArray * dataItems;
 @property (nonatomic, assign) id<PopoverTableViewControllerDelegate> delegate;
-
-- (CGSize)naturalSize;
+@property (nonatomic, readonly) CGSize naturalSize;
 
 @end

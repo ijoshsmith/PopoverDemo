@@ -17,6 +17,18 @@
 @synthesize statePopoverButton;
 @synthesize statePopoverSelectionManager;
 
+- (void)dealloc
+{
+    [cityTextField release];
+    [cityPopoverButton release];
+    [cityPopoverSelectionManager release];
+    [stateTextField release];
+    [statePopoverButton release];
+    [statePopoverSelectionManager release];
+    [statesToCities release];
+    [super dealloc];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -35,18 +47,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [cityTextField release];
-    [cityPopoverButton release];
-    [cityPopoverSelectionManager release];
-    [stateTextField release];
-    [statePopoverButton release];
-    [statePopoverSelectionManager release];
-    [statesToCities release];
-    [super dealloc];
-}
-
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -60,10 +60,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSArray *sortedStates = [[statesToCities allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 
     self.statePopoverSelectionManager = [[PopoverSelectionManager alloc] initWithButton:self.statePopoverButton 
                                                                         targetTextField:self.stateTextField 
-                                                                                options:[statesToCities allKeys] 
+                                                                                options:sortedStates
                                                                      includeOtherOption:YES];
     
     // The 'options' list will be provided once the State has been selected.
