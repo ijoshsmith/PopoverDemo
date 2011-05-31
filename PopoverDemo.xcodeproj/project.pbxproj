@@ -14,6 +14,11 @@
 		413F62651394613700E43525 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 413F62641394613700E43525 /* main.m */; };
 		413F62681394613700E43525 /* PopoverDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 413F62671394613700E43525 /* PopoverDemoAppDelegate.m */; };
 		413F626B1394613700E43525 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413F62691394613700E43525 /* MainWindow.xib */; };
+		413F62741394618E00E43525 /* DataEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 413F62721394618E00E43525 /* DataEntryViewController.m */; };
+		413F62751394618E00E43525 /* DataEntryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413F62731394618E00E43525 /* DataEntryViewController.xib */; };
+		413F627A139464FB00E43525 /* PopoverSelectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 413F6279139464FB00E43525 /* PopoverSelectionManager.m */; };
+		413F627E13946C7200E43525 /* PopoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 413F627C13946C7200E43525 /* PopoverTableViewController.m */; };
+		413F627F13946C7200E43525 /* PopoverTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413F627D13946C7200E43525 /* PopoverTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +26,21 @@
 		413F62571394613700E43525 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		413F62591394613700E43525 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		413F625B1394613700E43525 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		413F625F1394613700E43525 /* PopoverDemo-Info.plist */ = {isa = PBXFileReference; path = "PopoverDemo-Info.plist"; sourceTree = "<group>"; };
+		413F625F1394613700E43525 /* PopoverDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PopoverDemo-Info.plist"; sourceTree = "<group>"; };
 		413F62611394613700E43525 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		413F62631394613700E43525 /* PopoverDemo-Prefix.pch */ = {isa = PBXFileReference; path = "PopoverDemo-Prefix.pch"; sourceTree = "<group>"; };
+		413F62631394613700E43525 /* PopoverDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PopoverDemo-Prefix.pch"; sourceTree = "<group>"; };
 		413F62641394613700E43525 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		413F62661394613700E43525 /* PopoverDemoAppDelegate.h */ = {isa = PBXFileReference; path = PopoverDemoAppDelegate.h; sourceTree = "<group>"; };
+		413F62661394613700E43525 /* PopoverDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopoverDemoAppDelegate.h; sourceTree = "<group>"; };
 		413F62671394613700E43525 /* PopoverDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopoverDemoAppDelegate.m; sourceTree = "<group>"; };
 		413F626A1394613700E43525 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		413F62711394618E00E43525 /* DataEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataEntryViewController.h; sourceTree = "<group>"; };
+		413F62721394618E00E43525 /* DataEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataEntryViewController.m; sourceTree = "<group>"; };
+		413F62731394618E00E43525 /* DataEntryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataEntryViewController.xib; sourceTree = "<group>"; };
+		413F6278139464FB00E43525 /* PopoverSelectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverSelectionManager.h; sourceTree = "<group>"; };
+		413F6279139464FB00E43525 /* PopoverSelectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverSelectionManager.m; sourceTree = "<group>"; };
+		413F627B13946C7200E43525 /* PopoverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverTableViewController.h; sourceTree = "<group>"; };
+		413F627C13946C7200E43525 /* PopoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverTableViewController.m; sourceTree = "<group>"; };
+		413F627D13946C7200E43525 /* PopoverTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +87,12 @@
 		413F625D1394613700E43525 /* PopoverDemo */ = {
 			isa = PBXGroup;
 			children = (
+				413F62761394619900E43525 /* DataEntry */,
+				413F6277139464AC00E43525 /* Popover Management */,
+				413F625E1394613700E43525 /* Supporting Files */,
 				413F62661394613700E43525 /* PopoverDemoAppDelegate.h */,
 				413F62671394613700E43525 /* PopoverDemoAppDelegate.m */,
 				413F62691394613700E43525 /* MainWindow.xib */,
-				413F625E1394613700E43525 /* Supporting Files */,
 			);
 			path = PopoverDemo;
 			sourceTree = "<group>";
@@ -91,6 +106,28 @@
 				413F62641394613700E43525 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		413F62761394619900E43525 /* DataEntry */ = {
+			isa = PBXGroup;
+			children = (
+				413F62711394618E00E43525 /* DataEntryViewController.h */,
+				413F62721394618E00E43525 /* DataEntryViewController.m */,
+				413F62731394618E00E43525 /* DataEntryViewController.xib */,
+			);
+			name = DataEntry;
+			sourceTree = "<group>";
+		};
+		413F6277139464AC00E43525 /* Popover Management */ = {
+			isa = PBXGroup;
+			children = (
+				413F6278139464FB00E43525 /* PopoverSelectionManager.h */,
+				413F6279139464FB00E43525 /* PopoverSelectionManager.m */,
+				413F627B13946C7200E43525 /* PopoverTableViewController.h */,
+				413F627C13946C7200E43525 /* PopoverTableViewController.m */,
+				413F627D13946C7200E43525 /* PopoverTableViewController.xib */,
+			);
+			name = "Popover Management";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +179,8 @@
 			files = (
 				413F62621394613700E43525 /* InfoPlist.strings in Resources */,
 				413F626B1394613700E43525 /* MainWindow.xib in Resources */,
+				413F62751394618E00E43525 /* DataEntryViewController.xib in Resources */,
+				413F627F13946C7200E43525 /* PopoverTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +193,9 @@
 			files = (
 				413F62651394613700E43525 /* main.m in Sources */,
 				413F62681394613700E43525 /* PopoverDemoAppDelegate.m in Sources */,
+				413F62741394618E00E43525 /* DataEntryViewController.m in Sources */,
+				413F627A139464FB00E43525 /* PopoverSelectionManager.m in Sources */,
+				413F627E13946C7200E43525 /* PopoverTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

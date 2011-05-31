@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PopoverDemoAppDelegate : NSObject <UIApplicationDelegate> {
+@class DataEntryViewController;
 
+@interface PopoverDemoAppDelegate : NSObject <UIApplicationDelegate> {
+    DataEntryViewController *dataEntryVC;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

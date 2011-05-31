@@ -7,6 +7,7 @@
 //
 
 #import "PopoverDemoAppDelegate.h"
+#import "DataEntryViewController.h"
 
 @implementation PopoverDemoAppDelegate
 
@@ -15,7 +16,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    dataEntryVC = [[DataEntryViewController alloc] init];
+    [self.window addSubview:dataEntryVC.view];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -62,6 +65,7 @@
 - (void)dealloc
 {
     [_window release];
+    [dataEntryVC release];
     [super dealloc];
 }
 
